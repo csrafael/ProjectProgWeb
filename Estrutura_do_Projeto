@@ -1,0 +1,49 @@
+Tema:Crowdlearning;
+
+Objetivo: Desenvolver uma plataforma de Crowdlearning a fim de difundir conhecimento aproximando o usuário provedor do interessado.
+
+Funcionalidades da aplicação:
+	
+	O usuário criará um perfil;
+		Dados
+			Nome;
+			Email;
+			Senha;
+			data de nascimento;
+			formação academica;
+			especialidades;
+			interesses;
+
+	A plataforma apresentará atividades de usuários e eventos da universidade como atividades 
+
+	Usario deve ser capaz de oferecer suas experiencias e habilidades ao publico interessado;
+		Criação de atividades para oferecer habilidades e experiencias;
+
+		O tempo será a moeda de troca de serviços;
+			o usuário começará com 10h de tempo;
+			o usuário poderá ganhar horas através de suas atividades quando elas forem solicitadas por outros usuários;
+
+	Usuario deve ser capaz de procurar conteúdos que lhe interessem ser aprendidos;
+		O usuário poderá solicitar atividades de outros usuários e atividades da própria universidade;
+
+	forum;
+		janela mostrando usuários online;
+			chat e mensagens para conhecidos;
+				comunicar inicialmente apenas com pessoas online;
+					ter histórico de conversa e ser capaz de conversar offline;
+
+
+		recomendações aparecerão em cima dos tópicos;
+			baseado no histórico e perfil do usuário;
+		
+		terão regras do forum dentro de um tópico;
+
+		os foruns serão divididos em categorias;
+
+
+
+
+Definição do Projeto aplicação (MVC):
+
+
+Planejamento do Banco de dados:
