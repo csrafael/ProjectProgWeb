@@ -4,9 +4,14 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HOME-</title>
+<title>Insert title here</title>
 </head>
 <body>
-<a href="new-user.jsp">Criar Usuario</a>
+<form action="controller" method="post"> 
+				Email: <input type="text" name="email" /><br> 
+				Senha: <input type="password" name="senha" /> <br><br>
+				<input type="submit" value="Alterar" />
+				<input type="hidden" value="AlteraEmail" name="opcao"/>
+	</form>
 </body>
 </html>

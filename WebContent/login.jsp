@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>HOME-</title>
+<title>Insert title here</title>
 </head>
 <body>
-<a href="new-user.jsp">Criar Usuario</a>
+
 </body>
 </html>
