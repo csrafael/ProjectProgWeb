@@ -1,10 +1,10 @@
-package Action;
+package action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bases.Usuario;
 import project.modelo.UsuarioDAO;
-import user.Usuario;
 
 public class Remove implements Acao{
 	
@@ -22,6 +22,6 @@ public class Remove implements Acao{
 			uDAO.remove(user);
 		}
 		
-		return "sucesso.jsp";
+		return "/login.jsp";
 	}
 }

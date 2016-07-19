@@ -4,14 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>HOME-</title>
 </head>
 <body>
-<form action="controller" method="post">
-				Login: <input type="text" name="login" /><br>
-				Senha: <input type="password" name="senha" /><br><br>
-				<input type="submit" value="Remover" />
-				<input type="hidden" value="Remove" name="opcao"/>
-	</form>
+<h1>OH YEAH</h1>
+<a href="cria-atividade.jsp">Criar Atividade</a>
 </body>
 </html>

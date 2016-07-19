@@ -1,11 +1,11 @@
-package Action;
+package action;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bases.Usuario;
 import project.modelo.UsuarioDAO;
-import user.Usuario;
 
 public class Cadastra implements Acao{
 	
@@ -25,9 +25,6 @@ public class Cadastra implements Acao{
 		UsuarioDAO uDAO = new UsuarioDAO();
 		uDAO.cadastra(user);
 		
-		req.setAttribute("msg", "Usuario " + user.getLogin() + " cadastrado com sucesso!");
-		RequestDispatcher rd = req.getRequestDispatcher("/sucesso.jsp");
-		   rd.forward(req, resp);
-		return "./sucesso.jsp";
+		return "/login.jsp";
 	}
 }

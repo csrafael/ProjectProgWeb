@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="controller" method="post">
+<form action="../controller" method="post">
 				Login: <input type="text" name="login" /><br> 
 				Senha Antiga: <input type="password" name="senhaAntiga" /><br>
 				Senha Nova: <input type="password" name="senhaNova" /><br> 

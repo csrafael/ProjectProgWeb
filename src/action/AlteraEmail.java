@@ -1,10 +1,10 @@
-package Action;
+package action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bases.Usuario;
 import project.modelo.UsuarioDAO;
-import user.Usuario;
 
 public class AlteraEmail implements Acao{
 
@@ -24,6 +24,6 @@ public class AlteraEmail implements Acao{
 			uDAO.alteraEmail(user);
 		}
 		
-		return "/sucesso.jsp";
+		return "/login.jsp";
 	}
 }

@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 import com.mysql.jdbc.PreparedStatement;
 
+import bases.Usuario;
 import cripto.BCrypt;
 import project.jdbc.ConexaoBD;
-import user.Usuario;
 
 public class UsuarioDAO {
 	private Connection connection;
@@ -92,15 +92,15 @@ public class UsuarioDAO {
 		
 		Usuario user = getUsuario(usuario.getLogin());
 		
-		if(usuario != null && user != null)
-		permissao = BCrypt.checkpw(usuario.getPassword(), user.getPassword());
+		if(estaCadastrado(usuario.getLogin()))
+			permissao = BCrypt.checkpw(usuario.getPassword(), user.getPassword());
 		
 		return permissao;
 	}
 	
 	public boolean estaCadastrado(String login){
 		PreparedStatement stmt;
-		String sql = "select * from usuarios where usuario=?";
+		String sql = "select * from usuarios where login=?";
 		
 		try{
 			stmt = (PreparedStatement) connection.prepareStatement(sql);

@@ -1,4 +1,4 @@
-package user;
+package bases;
 
 public class Usuario {
 	private String login;

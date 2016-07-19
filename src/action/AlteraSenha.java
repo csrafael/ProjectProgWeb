@@ -1,10 +1,10 @@
-package Action;
+package action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import bases.Usuario;
 import project.modelo.UsuarioDAO;
-import user.Usuario;
 
 public class AlteraSenha implements Acao{
 	
@@ -25,6 +25,6 @@ public class AlteraSenha implements Acao{
 		}
 		
 		
-		return "/sucesso.jsp";
+		return "/login.jsp";
 	}
 }
