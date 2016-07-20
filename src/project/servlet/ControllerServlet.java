@@ -1,4 +1,4 @@
-package servlet;
+package project.servlet;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import action.Acao;
+import project.acao.Acao;
 
 @WebServlet("/controller")
 public class ControllerServlet extends HttpServlet {

@@ -1,4 +1,4 @@
-package project.modelo;
+package project.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 import com.mysql.jdbc.PreparedStatement;
 
-import bases.Usuario;
 import cripto.BCrypt;
 import project.jdbc.ConexaoBD;
+import project.modelo.Usuario;
 
 public class UsuarioDAO {
 	private Connection connection;
