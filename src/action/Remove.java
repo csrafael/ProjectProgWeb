@@ -20,8 +20,8 @@ public class Remove implements Acao{
 		UsuarioDAO uDAO = new UsuarioDAO();
 		if(uDAO.checaPermissao(user) == true){
 			uDAO.remove(user);
+			return "/login.jsp";
 		}
-		
-		return "/login.jsp";
+		return "/user/remove";
 	}
 }
