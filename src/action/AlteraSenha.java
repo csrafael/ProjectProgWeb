@@ -24,7 +24,6 @@ public class AlteraSenha implements Acao{
 			uDAO.alteraSenha(user);
 		}
 		
-		
 		return "/login.jsp";
 	}
 }
