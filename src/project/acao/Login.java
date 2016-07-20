@@ -1,10 +1,10 @@
-package action;
+package project.acao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bases.Usuario;
-import project.modelo.UsuarioDAO;
+import project.dao.UsuarioDAO;
+import project.modelo.Usuario;
 
 public class Login implements Acao {
 

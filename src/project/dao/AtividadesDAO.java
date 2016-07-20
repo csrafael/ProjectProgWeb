@@ -1,12 +1,12 @@
-package project.modelo;
+package project.dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.mysql.jdbc.PreparedStatement;
 
-import bases.Atividade;
 import project.jdbc.ConexaoBD;
+import project.modelo.Atividade;
 
 public class AtividadesDAO {
 

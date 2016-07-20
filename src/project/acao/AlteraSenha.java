@@ -1,27 +1,27 @@
-package action;
+package project.acao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bases.Usuario;
-import project.modelo.UsuarioDAO;
+import project.dao.UsuarioDAO;
+import project.modelo.Usuario;
 
-public class AlteraEmail implements Acao{
-
+public class AlteraSenha implements Acao{
+	
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse resp){
 		String login = req.getParameter("login");
-		String senha = req.getParameter("senha");
-		String email = req.getParameter("email");
+		String senhaAntiga = req.getParameter("senhaAntiga");
+		String senhaNova = req.getParameter("senhaNova");
 		
 		Usuario user = new Usuario();
 		user.setLogin(login);
-		user.setPassword(senha);
+		user.setPassword(senhaAntiga);
 		
 		UsuarioDAO uDAO = new UsuarioDAO();
 		if(uDAO.checaPermissao(user) == true){
-			user.setEmail(email);
-			uDAO.alteraEmail(user);
+			user.setPassword(senhaNova);
+			uDAO.alteraSenha(user);
 		}
 		
 		return "/login.jsp";

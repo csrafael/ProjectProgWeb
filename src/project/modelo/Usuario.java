@@ -1,4 +1,4 @@
-package bases;
+package project.modelo;
 
 public class Usuario {
 	private String login;
