@@ -2,5 +2,5 @@ USER progweb;
 
 CREATE TABLE usuarios(login VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, email VARCHAR(255), PRIMARY KEY(login), CONSTRAINT UNIQUE(login), CONSTRAINT UNIQUE(email));
 
-create table atividades(atvID bigint not null auto_increment, user varchar(255), descricao varchar(800), titulo varchar(100), date varchar(50), foreign key (user) references usuarios(login), primary key(atvID));
+CREATE TABLE atividades(atvID BIGINT NOT NULL AUTO_INCREMENT, user VARCHAR(255), descricao VARCHAR(800), titulo VARCHAR(100), date VARCHAR(50), FOREIGN KEY (user) REFERENCES usuarios(login), PRIMARY KEY(atvID));
 

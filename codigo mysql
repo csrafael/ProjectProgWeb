@@ -1,6 +1,28 @@
 USER progweb;
 
-CREATE TABLE usuarios(login VARCHAR(255) NOT NULL, password VARCHAR(255) NOT NULL, email VARCHAR(255), PRIMARY KEY(login), CONSTRAINT UNIQUE(login), CONSTRAINT UNIQUE(email));
+CREATE TABLE usuarios(login VARCHAR(255) NOT NULL, nascimento VARCHAR(8), password VARCHAR(255) NOT NULL, email VARCHAR(255), PRIMARY KEY(login), CONSTRAINT UNIQUE(login), CONSTRAINT UNIQUE(email));
 
 CREATE TABLE atividades(atvID BIGINT NOT NULL AUTO_INCREMENT, user VARCHAR(255), descricao VARCHAR(800), titulo VARCHAR(100), date VARCHAR(50), FOREIGN KEY (user) REFERENCES usuarios(login), PRIMARY KEY(atvID));
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| login      | varchar(255) | NO   | PRI | NULL    |       |
+| password   | varchar(255) | NO   |     | NULL    |       |
+| email      | varchar(255) | YES  | UNI | NULL    |       |
+| nascimento | varchar(8)   | YES  |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> describe atividades;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| atvID     | bigint(20)   | NO   | PRI | NULL    | auto_increment |
+| user      | varchar(255) | YES  | MUL | NULL    |                |
+| descricao | varchar(800) | YES  |     | NULL    |                |
+| titulo    | varchar(100) | YES  |     | NULL    |                |
+| date      | varchar(50)  | YES  |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
 
