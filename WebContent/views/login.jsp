@@ -31,6 +31,21 @@
 	</script>
 
 	<body>
+	
+		<p style="color: red">${msg}</p>	
+		<form role="form" action="login" method="post"> 
+			<div class="form-group">
+				<label for="nome">Usuário:</label>
+				<input type="text" name="usuario" class="form-control" id="usuario" placeholder="Digite o usuário"/>
+			</div>
+			<div class="form-group"> 
+				<label for="email">Senha:</label>
+				<input type="password" name="senha" class="form-control" id="senha" placeholder="Digite a Senha"/>
+			</div>
+			<br> <input type="submit" class="btn btn-default" value="Entrar" onclick="return validaCampos()" />
+			<br> <a href="cadastraUsuario.jsp">Não é cadastrado? Cadastre-se aqui.</a>
+		</form>
+	
 	<form name="login" action="controller" method="post" onsubmit="return validateForm()">
 				Login: <input type="text" name="login"><br>
 				Senha: <input type="password" name="senha"><br> 
