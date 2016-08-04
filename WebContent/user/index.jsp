@@ -4,12 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>HOME-</title>
 </head>
 <body>
-	<h3>Mensagem:</h3>
-	${msg}
-	<br><br>
-	<a href="index">Voltar para página inicial</a>
+<h1>OH YEAH</h1>
+<a href="cria-atividade.jsp">Criar Atividade</a>
 </body>
 </html>

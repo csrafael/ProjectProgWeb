@@ -1,12 +1,12 @@
-package projectprogweb.acao;
+package project.acao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import projectprogweb.dao.AtividadesDAO;
-import projectprogweb.dao.UsuarioDAO;
-import projectprogweb.modelo.Atividade;
-import projectprogweb.modelo.Usuario;
+import project.dao.AtividadesDAO;
+import project.dao.UsuarioDAO;
+import project.modelo.Atividade;
+import project.modelo.Usuario;
 
 public class CriaAtividade implements Acao{
 

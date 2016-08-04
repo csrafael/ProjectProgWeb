@@ -1,4 +1,4 @@
-package projectprogweb.modelo;
+package project.modelo;
 
 public class Atividade {
 	

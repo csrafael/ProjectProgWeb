@@ -1,4 +1,4 @@
-package projectprogweb.cripto;
+package project.cripto;
 
 //Copyright (c) 2006 Damien Miller <djm@mindrot.org>
 //

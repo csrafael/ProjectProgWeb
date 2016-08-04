@@ -1,12 +1,12 @@
-package projectprogweb.dao;
+package project.dao;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
 import com.mysql.jdbc.PreparedStatement;
 
-import projectprogweb.jdbc.ConexaoBD;
-import projectprogweb.modelo.Atividade;
+import project.jdbc.ConexaoBD;
+import project.modelo.Atividade;
 
 public class AtividadesDAO {
 
