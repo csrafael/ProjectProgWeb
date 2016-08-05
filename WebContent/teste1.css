@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+body{
+		background-color:#6bc799;
+	background-image: url("http://startupi.com.br/wp-content/uploads/2016/05/coworking.jpg");
+	background-size: 100%;
+	background-attachment:scroll;
+	background-repeat:no-repeat;
+}

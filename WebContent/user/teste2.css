@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+section{
+		
+		background-color:green;
+}
+   .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 50%;
+      margin: auto;
+  }
