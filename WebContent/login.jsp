@@ -37,7 +37,7 @@ function validateForm(){
 				<input type="hidden" value="Login" name="opcao"/>
 	</form>
 	-->
-	<div class="container-fluid text-center">    
+	<div class="container-fluid bg-1 text-center">    
   		<div class="row content">
   		 	<div class="col-sm-4">
     
@@ -49,7 +49,7 @@ function validateForm(){
 				<form role="form" action="login" method="post"> 
 					<div class="form-group">
 						<label for="nome">Usuário:</label>
-						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
+						<input type="text" name="usuario" class="form-control" id="login" placeholder="Digite o usuário"/>
 					</div>
 					<div class="form-group"> 
 						<label for="senha">Senha:</label>

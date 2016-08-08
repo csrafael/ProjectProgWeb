@@ -15,8 +15,8 @@
 <script type="text/javascript">
 	function validateData(){
 		var data = document.forms["criar"]["nascimento"].value;
-		if(data.length != 10){
-			alert("Favor inserir data no modelo 00/00/0000")
+		if(data.length != 8){
+			alert("Favor inserir data no modelo 00/00/00")
 			return false;
 		}
 	}

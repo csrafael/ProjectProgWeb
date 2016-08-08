@@ -14,10 +14,12 @@ import project.acao.Acao;
 @WebServlet("/controller")
 public class ControllerServlet extends HttpServlet {
 
+
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6554472043959300461L;
+	private static final long serialVersionUID = 1L;
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
