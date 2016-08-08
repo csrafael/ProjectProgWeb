@@ -21,10 +21,10 @@ public class Login implements Acao {
 		user.setPassword(senha);
 
 		if (dao.estaCadastrado(login) && dao.checaPermissao(user)) {
-			return "/user/index.jsp";
+			return "/user/index";
 		}
 
-		return "/login.jsp";
+		return "/login";
 	}
 
 }

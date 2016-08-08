@@ -1,4 +1,4 @@
-package project.servlet;
+package project.controller;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public class ControllerServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String opcao = req.getParameter("opcao");
-		String nomeDaClasse = "action." + opcao;
+		String nomeDaClasse = "project.acao." + opcao;
 		
 		try {
 			Class<?> classe = Class.forName(nomeDaClasse);
