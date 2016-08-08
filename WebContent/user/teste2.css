@@ -6,6 +6,9 @@ section{
 }
    .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-      width: 50%;
+      width: 70%;
       margin: auto;
+  }
+  img{
+  height: 345px;
   }

@@ -24,7 +24,7 @@
     <div class="col-sm-4">
     
     </div>
-    <div class="col-sm-4 text-center"> 
+    <div class="col-sm-4 text-center conteudo"> 
 		<h2>Login no Sistema</h2>
 			<p style="color: red">${msg}</p>
 			<form role="form" action="login" method="post"> 
@@ -44,10 +44,6 @@
 
     </div>
   </div>
-</div>
-
-<div class="container-fluid text-center">
-  <p>Footer Text</p>
 </div>
 
 </body>
