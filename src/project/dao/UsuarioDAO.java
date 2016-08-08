@@ -93,8 +93,9 @@ public class UsuarioDAO {
 		Usuario user = getUsuario(usuario.getLogin());
 		
 		if(estaCadastrado(usuario.getLogin()) || (usuario != null && user != null)){
-			System.out.println("usuario está cadastrado");
+			
 			permissao = BCrypt.checkpw(usuario.getPassword(), user.getPassword());
+			System.out.println("usuario está cadastrado");
 		}
 		else{
 			System.out.println("usuario nao cadastrado");

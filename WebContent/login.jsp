@@ -49,11 +49,11 @@ function validateForm(){
 				<form role="form" action="login" method="post"> 
 					<div class="form-group">
 						<label for="nome">Usuário:</label>
-						<input type="text" name="usuario" class="form-control" id="login" placeholder="Digite o usuário"/>
+						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
 					</div>
 					<div class="form-group"> 
 						<label for="senha">Senha:</label>
-						<input type="password" name="senha" class="form-control" id="senha" placeholder="Digite a Senha"/>
+						<input type="password" name="password" class="form-control" id="password" placeholder="Digite a Senha"/>
 					</div>
 					<br> <input type="submit" class="btn btn-default" value="Entrar" onclick="return validateForm()" />
 					<br> <a href="new-user.jsp">Não é cadastrado? Cadastre-se aqui.</a>
