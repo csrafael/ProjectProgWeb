@@ -8,7 +8,11 @@ body{
 .conteudo {
 	position:relative;
 	margin-top:150px;
+	padding: 20px;
 	/*background-color: #c2bcbf;*/
- 	background: rgba(179, 179, 179, 0.8) /* Green background with 80% opacity */
+ 	background: rgba(179, 179, 179, 0.9) /* Green background with 80% opacity */
 	
+}
+.form-group{
+	padding: 10px;
 }

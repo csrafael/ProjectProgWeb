@@ -1,14 +1,24 @@
 @CHARSET "ISO-8859-1";
 
-section{
+body{
 		
 		background-color:green;
 }
-   .carousel-inner > .item > img,
-  .carousel-inner > .item > a > img {
+.carousel-inner > .item > img .carousel-inner > .item > a > img {
       width: 70%;
       margin: auto;
-  }
-  img{
+}
+img{
   height: 345px;
-  }
+}
+.nav{
+background-color:gray;
+  margin:20px;
+}
+.content{
+background-color:olive;
+padding:20px;
+}
+.sidenav{
+  background-color: aqua;
+}

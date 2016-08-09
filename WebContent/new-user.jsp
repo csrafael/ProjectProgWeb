@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Criar novo Usuario</title>
+<title>UFABCShare - Novo Cadastro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
@@ -42,7 +42,7 @@
 	}
 </script>
 <body>
-	<form name="criar" action="controller" method="post" onsubmit="return validateForm()">
+	<!-- <form name="criar" action="controller" method="post" onsubmit="return validateForm()">
 				Login: <input type="text" name="login" /><br> 
 				Senha: <input type="password" name="senha" /><br>
 				Email: <input type="text" name="email" /><br> 
@@ -50,5 +50,45 @@
 				<input type="submit" value="Cadastrar" />
 				<input type="hidden" value="Cadastra" name="opcao"/>
 	</form>
+	 -->
+	<div class="container-fluid text-center">    
+  		<div class="row content">
+  		 	<div class="col-sm-4">
+    
+    		</div>
+    		
+    		<div class="col-sm-4 text-center conteudo"> 
+				<h2>Login no Sistema</h2>
+				<p style="color: red">${msgE}</p>
+				<p style="color:green">${msgS}</p>
+				<form class="form-horinzontal" role="form" action="cadastra" method="post">
+					<div class="form-group">
+						<label for="login">Login:</label>
+						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuario"/>
+						
+					</div>
+					<div class="form-group">
+						<label for="nome">Nome:</label>
+						<input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu Nome"/>
+					</div>
+					<div class="form-group">
+						<label for="email">Email:</label>
+						<input type="text" name="email" class="form-control" id="email" placeholder="Digite o Email"/>
+					</div>
+					<div class ="form-group">
+						<label for="data">Data de Nascimento:</label>
+						<input type="text" name="nascimento" class="form-control" id="nascimento" size="8" placeholder="00/00/00" onchange="return validateData()" />
+					</div>
+					<div class="form-group">
+						<label for="password">Senha:</label>
+						<input type="password" name="password" class="form-control" id="password" placeholder="Digite sua senha"/>
+					</div>
+					<input type="submit" class="btn btn-primary" value="Cadastrar" onclick="return validateForm()" /><br>
+				</form>
+    		</div>
+	    	<div class="col-sm-4 ">
+    		</div>
+  		</div>
+	</div>
 </body>
 </html>

@@ -6,6 +6,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
 //import org.springframework.web.bind.annotation.RequestMethod;
 import project.dao.UsuarioDAO;
 import project.modelo.Usuario;
@@ -23,17 +25,40 @@ public class LoginController {
 		UsuarioDAO dao = new UsuarioDAO(); 
 		
 		if(usuario == null || usuario.getLogin() == null) {
-			model.addAttribute("msg", "Por favor, faça login no sistema!");
+			model.addAttribute("msgA", "Por favor, faça login no sistema!");
 		}
 		else if (dao.estaCadastrado(usuario.getLogin()) && dao.checaPermissao(usuario)) {
-			model.addAttribute("msg", "Bem-vindo, " + usuario.getLogin() + "!");
+			model.addAttribute("msgS", "Bem-vindo, " + usuario.getLogin() + "!");
 			session.setAttribute("usuario", usuario); 
 			return "user/index";
 		}
 		else {
 			session.setAttribute("usuario", null);
-			model.addAttribute("msg", "Usuário ou senha incorreto(s)!");
+			model.addAttribute("msgE", "Usuário ou senha incorreto(s)!");
 		}
 		return "login";
+	}
+	
+	@RequestMapping(value="new-user", method=RequestMethod.GET)
+	public String cadastra() {
+		return "new-user";
+	}
+	
+	@RequestMapping(value="cadastra", method=RequestMethod.POST)
+	public String cadastraUsuario(Usuario user, Model model) {
+		UsuarioDAO dao = new UsuarioDAO();
+
+		if (!dao.estaCadastrado(user.getLogin())) {
+			dao.cadastra(user);
+			model.addAttribute("msgS", "Usuário: " + user.getLogin()
+			+ " cadastrado com sucesso!");
+			return "login";
+		}
+		else{
+			model.addAttribute("msgE", "Usuário: " + user.getLogin()
+			+ " usuário já cadastrado!");
+			return "/new-user.jsp";
+		}
+
 	}
 }
