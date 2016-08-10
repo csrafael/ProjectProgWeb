@@ -37,7 +37,7 @@ function validateForm(){
 				<input type="hidden" value="Login" name="opcao"/>
 	</form>
 	-->
-	<div class="container-fluid text-center">    
+	<div class="container-fluid">    
   		<div class="row content">
   		 	<div class="col-sm-4">
     
@@ -49,20 +49,16 @@ function validateForm(){
 				<p style="color:green">${msgS}</p>
 				<form role="form-horizontal" action="login" method="post"> 
 					<div class="form-group">
-						<label for="nome" class="control-label col-sm-2">Usuário:</label>
-						<div class="col-sm-10">
-							<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
-						</div>
+						<label for="nome">Usuário</label>
+						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
 					</div>
 					<br>
 					<div class="form-group"> 
-						<label for="pwd" class="control-label col-sm-2">Senha:</label>
-						<div class="col-sm-10">
-							<input type="password" name="password" class="form-control" id="pwd" placeholder="Digite a Senha"/>
-						</div>
+						<label for="password" class="control-label">Senha</label>					
+						<input type="password" name="password" class="form-control" id="password" placeholder="Digite a Senha"/>
 					</div>
 					<br>
-					<div class="col-sm-offset-2 col-sm-10">
+					<div>
 						<input type="submit" class="btn btn-primary" value="Entrar" onclick="return validateForm()" />
 					</div>
 					<br>

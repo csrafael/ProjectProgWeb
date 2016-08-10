@@ -25,7 +25,7 @@ public class LoginController {
 		UsuarioDAO dao = new UsuarioDAO(); 
 		
 		if(usuario == null || usuario.getLogin() == null) {
-			model.addAttribute("msgA", "Por favor, faÁa login no sistema!");
+			model.addAttribute("msgA", "Por favor, fa√ßa login no sistema!");
 		}
 		else if (dao.estaCadastrado(usuario.getLogin()) && dao.checaPermissao(usuario)) {
 			model.addAttribute("msgS", "Bem-vindo, " + usuario.getLogin() + "!");
@@ -34,7 +34,7 @@ public class LoginController {
 		}
 		else {
 			session.setAttribute("usuario", null);
-			model.addAttribute("msgE", "Usu·rio ou senha incorreto(s)!");
+			model.addAttribute("msgE", "Usuario ou senha incorreto(s)!");
 		}
 		return "login";
 	}
@@ -50,13 +50,13 @@ public class LoginController {
 
 		if (!dao.estaCadastrado(user.getLogin())) {
 			dao.cadastra(user);
-			model.addAttribute("msgS", "Usu·rio: " + user.getLogin()
+			model.addAttribute("msgS", "Usuario: " + user.getLogin()
 			+ " cadastrado com sucesso!");
 			return "login";
 		}
 		else{
-			model.addAttribute("msgE", "Usu·rio: " + user.getLogin()
-			+ " usu·rio j· cadastrado!");
+			model.addAttribute("msgE", "Usu√°rio: " + user.getLogin()
+			+ " usuario j√° cadastrado!");
 			return "/new-user.jsp";
 		}
 
