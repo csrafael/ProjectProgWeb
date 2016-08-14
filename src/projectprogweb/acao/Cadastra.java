@@ -1,11 +1,11 @@
-package project.acao;
+package projectprogweb.acao;
 
 //import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import project.dao.UsuarioDAO;
-import project.modelo.Usuario;
+import projectprogweb.dao.UsuarioDAO;
+import projectprogweb.modelo.Usuario;
 
 public class Cadastra implements Acao {
 

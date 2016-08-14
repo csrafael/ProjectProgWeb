@@ -1,4 +1,4 @@
-package project.jdbc;
+package projectprogweb.jdbc;
 
 import java.sql.DriverManager;
 

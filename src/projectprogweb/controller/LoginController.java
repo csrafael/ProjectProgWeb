@@ -1,4 +1,4 @@
-package project.controller;
+package projectprogweb.controller;
 
 //import java.sql.Connection;
 import javax.servlet.http.HttpServletRequest;
@@ -8,9 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-//import org.springframework.web.bind.annotation.RequestMethod;
-import project.dao.UsuarioDAO;
-import project.modelo.Usuario;
+import projectprogweb.dao.UsuarioDAO;
+import projectprogweb.modelo.Usuario;
 
 @Controller
 public class LoginController {
@@ -39,9 +38,9 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value="new-user", method=RequestMethod.GET)
+	@RequestMapping(value="cadastra", method=RequestMethod.GET)
 	public String cadastra() {
-		return "new-user";
+		return "cadastra";
 	}
 	
 	@RequestMapping(value="cadastra", method=RequestMethod.POST)
