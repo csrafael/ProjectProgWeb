@@ -29,7 +29,7 @@ public class LoginController {
 		else if (dao.estaCadastrado(usuario.getLogin()) && dao.checaPermissao(usuario)) {
 			model.addAttribute("msgS", "Bem-vindo, " + usuario.getLogin() + "!");
 			session.setAttribute("usuario", usuario); 
-			return "user/index";
+			return "admin/index";
 		}
 		else {
 			session.setAttribute("usuario", null);
@@ -49,15 +49,21 @@ public class LoginController {
 
 		if (!dao.estaCadastrado(user.getLogin())) {
 			dao.cadastra(user);
-			model.addAttribute("msgS", "Usuario: " + user.getLogin()
+			model.addAttribute("msgS", "Usu·rio: " + user.getLogin()
 			+ " cadastrado com sucesso!");
 			return "login";
 		}
 		else{
-			model.addAttribute("msgE", "Usu√°rio: " + user.getLogin()
-			+ " usuario j√° cadastrado!");
-			return "/new-user.jsp";
+			model.addAttribute("msgE", "Usu·rio: " + user.getLogin()
+			+ " usuario j· cadastrado!");
+			return "/cadastra";
 		}
 
 	}
+
+	@RequestMapping(value="index", method=RequestMethod.GET)
+	public String index() {
+		return "admin/index";
+	}
+	
 }

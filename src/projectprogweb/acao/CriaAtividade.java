@@ -33,9 +33,9 @@ public class CriaAtividade implements Acao{
 			AtividadesDAO atvDAO = new AtividadesDAO();
 			atvDAO.criaAtividade(atv);
 
-			return "/user/index.jsp";
+			return "/admin/index.jsp";
 		}else 
-			req.setAttribute("msg", "Usu√°rio ou senha incorreto(s)!");
-		return "/user/cria-atividade.jsp";
+			req.setAttribute("msg", "Usu·rio ou senha incorreto(s)!");
+		return "/admin/cria-atividade.jsp";
 	}
 }

@@ -22,6 +22,6 @@ public class Remove implements Acao{
 			uDAO.remove(user);
 			return "/login.jsp";
 		}
-		return "/user/remove";
+		return "/admin/remove";
 	}
 }

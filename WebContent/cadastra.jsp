@@ -63,28 +63,30 @@
 				<p style="color:green">${msgS}</p>
 				<form class="form-horinzontal" role="form" action="cadastra" method="post">
 					<div class="form-group">
-						<label for="login">Login:</label>
+						
 						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuario"/>
 						
 					</div>
 					<div class="form-group">
-						<label for="nome">Nome:</label>
+						
 						<input type="text" name="nome" class="form-control" id="nome" placeholder="Digite seu Nome"/>
 					</div>
 					<div class="form-group">
-						<label for="email">Email:</label>
+						
 						<input type="text" name="email" class="form-control" id="email" placeholder="Digite o Email"/>
 					</div>
 					<div class ="form-group">
-						<label for="data">Data de Nascimento:</label>
+						
 						<input type="text" name="nascimento" class="form-control" id="nascimento" size="8" placeholder="00/00/00" onchange="return validateData()" />
 					</div>
 					<div class="form-group">
-						<label for="password">Senha:</label>
+						
 						<input type="password" name="password" class="form-control" id="password" placeholder="Digite sua senha"/>
 					</div>
 					<input type="submit" class="btn btn-primary" value="Cadastrar" onclick="return validateForm()" /><br>
 				</form>
+				<br>
+				<a href="login">Voltar para o login</a>
     		</div>
 	    	<div class="col-sm-4 ">
     		</div>

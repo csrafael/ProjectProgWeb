@@ -21,7 +21,7 @@ public class Login implements Acao {
 		user.setPassword(senha);
 
 		if (dao.estaCadastrado(login) && dao.checaPermissao(user)) {
-			return "/user/index";
+			return "/admin/index";
 		}
 
 		return "/login";

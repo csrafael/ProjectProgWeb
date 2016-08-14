@@ -38,23 +38,25 @@ function validateForm(){
 	</form>
 	-->
 	<div class="container-fluid">    
+	
   		<div class="row content">
   		 	<div class="col-sm-4">
     
     		</div>
     		
-    		<div class="col-sm-4 text-center conteudo"> 
+    		<div class=" mainbox col-sm-4 text-center conteudo"> 
+    			<div class="row">
+    				 <img src="" class="img-responsive" alt="logo">
+    			</div>
 				<h2>Login no Sistema</h2>
 				<p style="color: red">${msgE}</p>
 				<p style="color:green">${msgS}</p>
 				<form role="form-horizontal" action="login" method="post"> 
 					<div class="form-group">
-						<label for="nome">Usuário</label>
 						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
 					</div>
 					<br>
-					<div class="form-group"> 
-						<label for="password" class="control-label">Senha</label>					
+					<div class="form-group"> 					
 						<input type="password" name="password" class="form-control" id="password" placeholder="Digite a Senha"/>
 					</div>
 					<br>
@@ -63,7 +65,7 @@ function validateForm(){
 					</div>
 					<br>
 					<br>
-					<a href="new-user.jsp">Não é cadastrado? Cadastre-se aqui.</a>
+					<a href="cadastra">Não é cadastrado? Cadastre-se aqui.</a>
 				</form>
     		</div>
 	    	<div class="col-sm-4 ">
