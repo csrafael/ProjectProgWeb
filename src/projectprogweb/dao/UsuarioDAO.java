@@ -18,17 +18,18 @@ public class UsuarioDAO {
 	}
 	
 	public void cadastra(Usuario user){
-		String sql = "insert into usuarios (login, password, email, nascimento) values(?,?,?,?)";
+		String sql = "insert into usuarios (nome, login, password, email, nascimento) values(?,?,?,?,?)";
 		
 		try{
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
 			
 			String senha = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
 			
-			stmt.setString(1, user.getLogin());
-			stmt.setString(2, senha);
-			stmt.setString(3, user.getEmail());
-			stmt.setString(4, user.getNascimento());
+			stmt.setString(1, user.getNome());
+			stmt.setString(2, user.getLogin());
+			stmt.setString(3, senha);
+			stmt.setString(4, user.getEmail());
+			stmt.setString(5, user.getNascimento());
 			
 			stmt.execute();
 			stmt.close();
@@ -95,7 +96,7 @@ public class UsuarioDAO {
 		if(estaCadastrado(usuario.getLogin()) || (usuario != null && user != null)){
 			
 			permissao = BCrypt.checkpw(usuario.getPassword(), user.getPassword());
-			System.out.println("usuario está cadastrado");
+			System.out.println("usuario estï¿½ cadastrado");
 		}
 		else{
 			System.out.println("usuario nao cadastrado");

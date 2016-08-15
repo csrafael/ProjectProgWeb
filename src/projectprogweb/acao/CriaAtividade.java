@@ -1,4 +1,4 @@
-package projectprogweb.acao;
+/*package projectprogweb.acao;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,7 +35,7 @@ public class CriaAtividade implements Acao{
 
 			return "/admin/index.jsp";
 		}else 
-			req.setAttribute("msg", "Usuário ou senha incorreto(s)!");
+			req.setAttribute("msg", "Usuï¿½rio ou senha incorreto(s)!");
 		return "/admin/cria-atividade.jsp";
 	}
 }

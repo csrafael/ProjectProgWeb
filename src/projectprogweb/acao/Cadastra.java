@@ -1,4 +1,4 @@
-package projectprogweb.acao;
+/*package projectprogweb.acao;
 
 //import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
@@ -11,12 +11,14 @@ public class Cadastra implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+		String nome = req.getParameter("nome");
 		String login = req.getParameter("login");
 		String senha = req.getParameter("senha");
 		String email = req.getParameter("email");
 		String nascimento = req.getParameter("nascimento");
 
 		Usuario user = new Usuario();
+		user.setNome(nome);
 		user.setLogin(login);
 		user.setPassword(senha);
 		user.setEmail(email);

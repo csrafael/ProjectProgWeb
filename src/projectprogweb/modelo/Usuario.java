@@ -2,10 +2,11 @@ package projectprogweb.modelo;
 
 public class Usuario {
 	private String login;
+	private String nome;
 	private String password;
 	private String email;
 	private String nascimento;
-
+	
 	public String getLogin() {
 		return login;
 	}
@@ -36,6 +37,14 @@ public class Usuario {
 
 	public void setNascimento(String nascimento) {
 		this.nascimento = nascimento;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 }
