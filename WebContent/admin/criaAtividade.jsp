@@ -1,13 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Criacao de Atividade</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-	<link href="/resources/css/teste2.css" rel="stylesheet" />
+	<link href="resources/css/teste2.css" rel="stylesheet" />
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -75,7 +77,9 @@
 			<div class="col-sm-2">
 				<div class="sidenav">
 					<ul class="nav nav-stacked text-center">
-       					<li><a href="perfil"><img alt="perfilImg" class="img-responsive" src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"></a></li>
+       					<li><a href="perfil"><img alt="perfilImg" class="img img-responsive" 
+       							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
+       							height="100" width="70" style="position:relative;"></a></li>
         				<li><a href="admin/cria-atividade.jsp">Criar Atividade</a></li>
         				<li><a href="admin/altera-email.jsp">Alterar Email</a></li>
         				<li><a href="admin/altera-senha.jsp">Alterar Senha</a></li>
@@ -85,15 +89,40 @@
 			</div>
 			
 			<div class="col-sm-10">
-				<form name="atividade" action="../controller" method="post" onsubmit="return validateForm()">
+				<!--  <form name="atividade" action="../controller" method="post" onsubmit="return validateForm()">
 					Login: <input type="text" name="login" /><br> 
-					Senha: <input type="password" name="senha" /><br>
 					Titulo: <input type="text" name="titulo" size="100"/><br>
 					Data: <input type="text" name="data" /><br>
 					Descricao: <br><textarea name="descricao" onchange="return tamanhoDescricao()"></textarea><br><br> 
 					<input type="submit" value="Criar Atividade!" />
 					<input type="hidden" value="CriaAtividade" name="opcao"/>
 				</form>
+				-->
+				<div class="col-sm-6 ">
+				<form role="form-horizontal" action="criaAtividade" method="post" onsubmit="return validateForm()"> 
+					<div class="form-group">
+						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
+					</div>
+					<br>
+					<div class="form-group"> 					
+						<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Digite o titulo"/>
+					</div>
+					<br>
+					<div class ="form-group">
+						<input type="text" name="data" class="form-control" id="nascimento" size="8" placeholder="00/00/00" onchange="return validateData()" />
+					</div>
+					<br>
+					<div class="form-group">
+						<label for="descricao">Descrição:</label>
+						<textarea class="form-control" rows="5" id="descricao"></textarea>
+					</div>
+					<br>
+					<div>
+						<input type="submit" class="btn btn-primary" value="Criar Atividade" onclick="return validateForm()" />
+					</div>
+				</form>
+				
+				</div> 
 			</div>
 		</div>
 	</div>

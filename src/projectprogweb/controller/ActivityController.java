@@ -18,7 +18,7 @@ public class ActivityController {
 	
 	@RequestMapping(value="criaAtividade", method=RequestMethod.GET)
 	public String cadastra() {
-		return "adimin/cria-atividade";
+		return "admin/criaAtividade";
 	}
 	@RequestMapping(value="criaAtividade", method=RequestMethod.POST)
 	public String criaAtvidade(Usuario user, Atividade atividade, HttpServletRequest req, Model model){
@@ -36,7 +36,7 @@ public class ActivityController {
 
 			return "/admin/index.jsp";
 		}else 
-			req.setAttribute("msg", "Usuário ou senha incorreto(s)!");
+			req.setAttribute("msg", "Usuario ou senha incorreto(s)!");
 		return "/admin/cria-atividade.jsp";
 	}
 }
