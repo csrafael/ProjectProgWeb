@@ -49,13 +49,13 @@ public class LoginController {
 
 		if (!dao.estaCadastrado(user.getLogin())) {
 			dao.cadastra(user);
-			model.addAttribute("msgS", "Usuário: " + user.getLogin()
+			model.addAttribute("msgS", "Usuario: " + user.getLogin()
 			+ " cadastrado com sucesso!");
 			return "login";
 		}
 		else{
-			model.addAttribute("msgE", "Usuário: " + user.getLogin()
-			+ " usuario já cadastrado!");
+			model.addAttribute("msgE", "Usuario: " + user.getLogin()
+			+ " usuario jï¿½ cadastrado!");
 			return "/cadastra";
 		}
 

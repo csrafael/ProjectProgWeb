@@ -75,11 +75,11 @@
 	<div class ="container-fluid">
 		<div class="row content">
 			<div class="col-sm-2">
-				<div class="sidenav">
+				<div class="sidenav ">
 					<ul class="nav nav-stacked text-center">
-       					<li><a href="perfil"><img alt="perfilImg" class="img img-responsive" 
+       					<li><a href="perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
-       							height="100" width="70" style="position:relative;"></a></li>
+       							height="150" width="100"></a></li>
         				<li><a href="admin/cria-atividade.jsp">Criar Atividade</a></li>
         				<li><a href="admin/altera-email.jsp">Alterar Email</a></li>
         				<li><a href="admin/altera-senha.jsp">Alterar Senha</a></li>
@@ -98,26 +98,32 @@
 					<input type="hidden" value="CriaAtividade" name="opcao"/>
 				</form>
 				-->
+				<div class="col-sm-2">
+				</div>
 				<div class="col-sm-6 ">
 				<form role="form-horizontal" action="criaAtividade" method="post" onsubmit="return validateForm()"> 
 					<div class="form-group">
+					<label for="criador">Criador:</label>
 						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
 					</div>
 					<br>
-					<div class="form-group"> 					
+					<div class="form-group">
+					<label for="titulo">Título:</label> 					
 						<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Digite o titulo"/>
 					</div>
 					<br>
 					<div class ="form-group">
+					<label for="data">Data:</label>
 						<input type="text" name="data" class="form-control" id="nascimento" size="8" placeholder="00/00/00" onchange="return validateData()" />
 					</div>
 					<br>
+					
 					<div class="form-group">
 						<label for="descricao">Descrição:</label>
 						<textarea class="form-control" rows="5" id="descricao"></textarea>
 					</div>
 					<br>
-					<div>
+					<div class="text-right">
 						<input type="submit" class="btn btn-primary" value="Criar Atividade" onclick="return validateForm()" />
 					</div>
 				</form>

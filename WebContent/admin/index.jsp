@@ -42,7 +42,9 @@
 			<div class="col-sm-2">
 				<div class="sidenav">
 					<ul class="nav nav-stacked text-center">
-       					<li><a href="admin/perfil.jsp"><img alt="perfilImg" class="img-responsive" src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"></a></li>
+       					<li><a href="perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
+       							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
+       							height="150" width="100"></a></li>
         				<li><a href="admin/criaAtividade.jsp">Criar Atividade</a></li>
         				<li><a href="admin/alteraEmail.jsp">Alterar Email</a></li>
         				<li><a href="admin/alteraSenha.jsp">Alterar Senha</a></li>
