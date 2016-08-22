@@ -46,7 +46,7 @@ function validateForm(){
     		
     		<div class=" mainbox col-sm-4 text-center conteudo"> 
     			<div class="row">
-    				 <img src="" class="img-responsive" alt="logo">
+    				 <img src="resources/img/logoshare.png" class="img-responsive" alt="logo">
     			</div>
 				<h2>Login no Sistema</h2>
 				<p style="color: red">${msgE}</p>

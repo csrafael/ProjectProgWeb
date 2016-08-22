@@ -42,15 +42,8 @@
 	}
 </script>
 <body>
-	<!-- <form name="criar" action="controller" method="post" onsubmit="return validateForm()">
-				Login: <input type="text" name="login" /><br> 
-				Senha: <input type="password" name="senha" /><br>
-				Email: <input type="text" name="email" /><br> 
-				Data de nascimento: <input type="text" name="nascimento" size="8" onchange="return validateData()"/><br><br> 
-				<input type="submit" value="Cadastrar" />
-				<input type="hidden" value="Cadastra" name="opcao"/>
-	</form>
-	 -->
+
+
 	<div class="container-fluid text-center">    
   		<div class="row content">
   		 	<div class="col-sm-4">

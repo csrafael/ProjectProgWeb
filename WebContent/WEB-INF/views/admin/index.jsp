@@ -20,7 +20,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>                        
       				</button>
-      				<a class="navbar-brand" href="admin/index">UFABC Share</a>
+      				<a class="navbar-brand" href="admin/index"><img alt="UFABC Share" src="resources/img/logoshare.png"></a>
     			</div>
 
 		 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -42,12 +42,11 @@
 			<div class="col-sm-2">
 				<div class="sidenav">
 					<ul class="nav nav-stacked text-center">
-       					<li><a href="perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
+       					<li><a href="admin/perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
        							height="150" width="100"></a></li>
         				<li><a href="admin/criaAtividade.jsp">Criar Atividade</a></li>
-        				<li><a href="admin/alteraEmail.jsp">Alterar Email</a></li>
-        				<li><a href="admin/alteraSenha.jsp">Alterar Senha</a></li>
+
 			 		</ul>
 			 	
 				</div>
@@ -55,28 +54,29 @@
 			
 			<div class="col-sm-10">
 				<div class="row col-sm-12 panel-body">
-					<h1 class="text-center">OH YEAH</h1>
-					<div class="col-sm-4 atv text-center">
+					<div class="col-sm-5 atv text-center">
+						<img alt="atv-1" src="atv-1">
 						<h2>ATV-1</h2>
+						<h6>descrição</h6>
 					</div>
-					<div class="col-sm-4 atv text-center">
+					<div class="col-sm-5 atv text-center">
+						<img alt="atv-1" src="atv-1">
 						<h2>ATV-2</h2>
+						<h6>descrição</h6>
 					</div>
-					<div class="col-sm-4 atv text-center">
-						<h2>ATV-3</h2>
-					</div>
+
 				</div>
 			
 				<div class="row col-sm-12">
-					<h1 class="text-center">OH YEAH</h1>
-					<div class="col-sm-4 atv text-center">
+					<div class="col-sm-5 atv text-center">
+						<img alt="atv-1" src="atv-1">
 						<h2>ATV-1</h2>
+						<h6>descrição</h6>
 					</div>
-					<div class="col-sm-4 atv text-center">
+					<div class="col-sm-5 atv text-center">
+						<img alt="atv-1" src="atv-1">
 						<h2>ATV-2</h2>
-					</div>
-					<div class="col-sm-4 atv text-center">
-						<h2>ATV-3</h2>
+						<h6>descrição</h6>
 					</div>
 				</div>
 			</div>

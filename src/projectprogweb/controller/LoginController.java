@@ -24,7 +24,7 @@ public class LoginController {
 		UsuarioDAO dao = new UsuarioDAO(); 
 		
 		if(usuario == null || usuario.getLogin() == null) {
-			model.addAttribute("msgA", "Por favor, faça login no sistema!");
+			model.addAttribute("msgA", "Por favor, faca login no sistema!");
 		}
 		else if (dao.estaCadastrado(usuario.getLogin()) && dao.checaPermissao(usuario)) {
 			model.addAttribute("msgS", "Bem-vindo, " + usuario.getLogin() + "!");
@@ -55,7 +55,7 @@ public class LoginController {
 		}
 		else{
 			model.addAttribute("msgE", "Usuario: " + user.getLogin()
-			+ " usuario j� cadastrado!");
+			+ " usuario ja cadastrado!");
 			return "/cadastra";
 		}
 
