@@ -92,7 +92,7 @@
 				</div>
 				<div class="col-sm-6 ">
 				<p style="color: red">${msgE}</p>
-				<form role="form-horizontal" action="cria-atividade" method="post" onsubmit="return validateForm()"> 
+				<form role="form-horizontal" action="criaAtividade" method="post" onsubmit="return validateForm()"> 
 					<div class="form-group">
 						<input type="text" name="criador" class="form-control" id="criador" placeholder="Digite o usuário"/>
 					</div>

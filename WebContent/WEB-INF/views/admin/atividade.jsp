@@ -42,7 +42,7 @@
 			<div class="col-sm-2">
 				<div class="sidenav">
 					<ul class="nav nav-stacked text-center">
-       					<li><a href="admin/perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
+       					<li><a href="${pageContext.request.contextPath}/admin/perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
        							height="150" width="100"></a></li>
         				<li><a href="criaAtividade">Criar Atividade</a></li>
@@ -54,30 +54,15 @@
 			
 			<div class="col-sm-10 mainbox">
 				<div class="row col-sm-12 panel-body">
-					<div class="col-sm-5 atv text-center">
-						<a href="${pageContext.request.contextPath}/admin/atividade"><img alt="atv-1" src="atv-1"></a>
+						<img alt="" src="" class="center-block img-responsive">
+						
+						
 						<h2>ATV-1</h2>
-						<h6>descrição</h6>
-					</div>
-					<div class="col-sm-5 atv text-center">
-						<a href="${pageContext.request.contextPath}/admin/atividade"><img alt="atv-1" src="atv-1"></a>
-						<h2>ATV-2</h2>
-						<h6>descrição</h6>
-					</div>
+						
+						<p>descrição</p>
+					
+						<h4>inscritos</h4>
 
-				</div>
-			
-				<div class="row col-sm-12">
-					<div class="col-sm-5 atv text-center">
-						<a href="${pageContext.request.contextPath}/admin/atividade"><img alt="atv-1" src="atv-1"></a>
-						<h2>ATV-1</h2>
-						<h6>descrição</h6>
-					</div>
-					<div class="col-sm-5 atv text-center">
-						<a href="${pageContext.request.contextPath}/admin/atividade"><img alt="atv-1" src="atv-1"></a>
-						<h2>ATV-2</h2>
-						<h6>descrição</h6>
-					</div>
 				</div>
 			</div>
 		</div>

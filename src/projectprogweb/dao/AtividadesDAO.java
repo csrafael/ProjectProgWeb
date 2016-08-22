@@ -93,4 +93,20 @@ public class AtividadesDAO {
 		}
 		return lista;
 	}
+	public void adicionaInscrito(String login, String atv){
+		String sql = "update atividades set inscritos=concat(inscritos,?) where titulo=?";
+		
+		try {
+			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
+			
+			stmt.setString(1, login);
+			stmt.setString(2, atv);
+			
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
 }

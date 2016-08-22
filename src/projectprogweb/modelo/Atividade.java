@@ -6,7 +6,7 @@ public class Atividade {
 	private String titulo;
 	private String descricao;
 	private String data;
-	
+	private String inscritos;
 	
 	public String getCriador() {
 		return criador;
@@ -31,5 +31,11 @@ public class Atividade {
 	}
 	public void setData(String data) {
 		this.data = data;
+	}
+	public String getInscritos() {
+		return inscritos;
+	}
+	public void setInscritos(String inscritos) {
+		this.inscritos = inscritos;
 	}
 }

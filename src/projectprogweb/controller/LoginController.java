@@ -47,7 +47,7 @@ public class LoginController {
 		}
 		return "login";
 	}	
-	@RequestMapping("logout")
+	@RequestMapping("/admin/logout")
 	public String logout(Usuario usuario, HttpServletRequest req, Model model) {
 
 		HttpSession session = req.getSession(true);

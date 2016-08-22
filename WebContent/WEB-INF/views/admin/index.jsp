@@ -66,7 +66,7 @@
 				<div class="col-sm-10 mainbox">
 					<div class="row col-sm-12 panel-body">
 						<div class="col-sm-5 atv text-center">
-							<h2>${atividade.titulo }</h2>
+							<h2><a href="${pageContext.request.contextPath}/admin/atividade">${atividade.titulo }</a></h2>
 							<h6>Descricao: ${atividade.descricao }</h6>
 							Criador: ${atividade.criador} Data: ${atividade.data }
 							<form action="subscribe" method="post">

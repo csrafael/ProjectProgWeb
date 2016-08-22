@@ -18,7 +18,7 @@ public class ActivityController {
 		return "admin/criaAtividade";
 	}
 
-	@RequestMapping(value = "cria-atividade", method = RequestMethod.POST)
+	@RequestMapping(value = "criaAtividade", method = RequestMethod.POST)
 	public String criaAtividade(Atividade atividade, HttpServletRequest req, Model model) {
 		UsuarioDAO user = new UsuarioDAO();
 		
