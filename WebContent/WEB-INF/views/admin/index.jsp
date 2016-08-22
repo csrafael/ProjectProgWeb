@@ -61,10 +61,11 @@
 				</div>
 			</div>
 			
-				<c:forEach var="atividade" items="${dao.lista}">
-
 				<div class="col-sm-10 mainbox">
 					<div class="row col-sm-12 panel-body">
+			
+				<c:forEach var="atividade" items="${dao.lista}">
+
 						<div class="col-sm-5 atv text-center">
 							<h2><a href="${pageContext.request.contextPath}/admin/atividade">${atividade.titulo }</a></h2>
 							<h6>Descricao: ${atividade.descricao }</h6>
@@ -78,10 +79,12 @@
 								<input type="submit"  class="btn btn-primary" value="Inscrever-se" />
 							</form>
 						</div>
+						
+					</c:forEach>
 					</div>
 				</div>
 
-			</c:forEach>
+
 		</div>
 	</div>
 	

@@ -10,7 +10,9 @@ body{
 .content{
 
 }
-
+.col-sm-5{
+	margin: 20px;
+}
 .sidenav{
   background-color:#333333;
   height: 720px;
@@ -19,6 +21,13 @@ body{
 	border: solid;
 	margin-left: 10px;
 	padding: 10px;
+}
+.atv-index{
+	border: solid;
+	margin: 20px;
+	padding: 10px;
+	float:left;
+	position: relative;
 }
 #icon-facebook{
 	width: 40px;
