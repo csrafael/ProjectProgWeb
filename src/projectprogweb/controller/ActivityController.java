@@ -22,7 +22,7 @@ public class ActivityController {
 	public String criaAtividade(Atividade atividade, HttpServletRequest req, Model model) {
 		UsuarioDAO user = new UsuarioDAO();
 		
-		if (!user.estaCadastrado(atividade.getCriador()) || req.getSession().getAttribute("usuario") != atividade.getCriador()) {
+		if (!user.estaCadastrado(atividade.getCriador())) {
 			model.addAttribute("msgE", "Usuario incorreto");
 			return "/admin/criaAtividade";
 		} else {

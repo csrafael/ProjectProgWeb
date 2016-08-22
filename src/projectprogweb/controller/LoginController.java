@@ -80,17 +80,17 @@ public class LoginController {
 
 	}
 
-	@RequestMapping(value="index", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/index", method=RequestMethod.GET)
 	public String index() {
 		return "admin/index";
 	}
 	
-	@RequestMapping(value="perfil", method=RequestMethod.GET)
+	@RequestMapping(value="/admin/perfil", method=RequestMethod.GET)
 	public String perfil() {
 		return "admin/perfil";
 	}
 	
-	@RequestMapping(value="alteraSenha", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/alteraSenha", method=RequestMethod.POST)
 	public String alteraSenha(Usuario user, Model model) {
 		UsuarioDAO dao = new UsuarioDAO();
 
@@ -109,7 +109,7 @@ public class LoginController {
 		return "admin/perfil";
 
 	}
-	@RequestMapping(value="alteraEmail", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/alteraEmail", method=RequestMethod.POST)
 	public String alteraEmail(Usuario user, Model model) {
 		UsuarioDAO dao = new UsuarioDAO();
 
@@ -125,7 +125,7 @@ public class LoginController {
 
 	}
 	
-	@RequestMapping(value="removeUsuario", method=RequestMethod.POST)
+	@RequestMapping(value="/admin/removeUsuario", method=RequestMethod.POST)
 	public String removerUsuario(Usuario user, Model model) {
 		UsuarioDAO dao = new UsuarioDAO();
 

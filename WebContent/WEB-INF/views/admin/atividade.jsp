@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-	<link href="resources/css/teste2.css" rel="stylesheet" />
+	<link href="${pageContext.request.contextPath}/resources/css/teste2.css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -20,13 +20,13 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>                        
       				</button>
-      				<a class="navbar-brand" href="${pageContext.request.contextPath}/admin/index"><img alt="UFABC Share" class="center-block logo" src="resources/img/logoabc-2.png"></a>
+      				<a class="navbar-brand" href="${pageContext.request.contextPath}/admin/index"><img alt="UFABC Share" class="center-block logo" src="${pageContext.request.contextPath}/resources/img/logoabc-2.png"></a>
     			</div>
 
 		 		<div class="collapse navbar-collapse" id="myNavbar">
     				<ul class="nav navbar-nav">
 					    <li class="social-facebook">
-  							<a href="https://www.facebook.com/" ><img alt="facebook" src="resources/img/facebook_icon.png" id="icon-facebook"></a>
+  							<a href="https://www.facebook.com/" ><img alt="facebook" src="${pageContext.request.contextPath}/resources/img/facebook_icon.png" id="icon-facebook"></a>
   						</li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
