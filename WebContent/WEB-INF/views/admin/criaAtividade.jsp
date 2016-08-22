@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Criacao de Atividade</title>
+	<title>UFABC Share - Criacao de Atividade</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -21,13 +21,13 @@
 		}
 	}
 	function validateForm(){
-		var login = document.forms["atividade"]["login"].value;
+		var criador = document.forms["atividade"]["login"].value;
 		var senha = document.forms["atividade"]["senha"].value;
 		var titulo = document.forms["atividade"]["titulo"].value;
 		var descricao = document.forms["atividade"]["descricao"].value;
 		var data = document.forms["atividade"]["data"].value;
 		
-		if(login == null || login == ""){
+		if(criador == null || criador == ""){
 			alert("Login nao pode ficar vazio");
 			return false;
 		} else if(senha == null || senha == ""){
@@ -55,7 +55,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>                        
       				</button>
-      				<a class="navbar-brand" href="admin/index">UFABC Share</a>
+      				<a class="navbar-brand" href="${pageContext.request.contextPath}/admin/index"><img alt="UFABC Share" class="center-block logo" src="resources/img/logoabc-2.png"></a>
     			</div>
 
 		 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -65,7 +65,7 @@
   						</li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
-      					<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     				</ul>
   				</div>
 			</div>
@@ -80,50 +80,37 @@
        					<li><a href="perfil"><img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png"
        							height="150" width="100"></a></li>
-        				<li><a href="admin/cria-atividade.jsp">Criar Atividade</a></li>
-        				<li><a href="admin/altera-email.jsp">Alterar Email</a></li>
-        				<li><a href="admin/altera-senha.jsp">Alterar Senha</a></li>
+        				<li><a href="admin/criaAtividade.jsp">Criar Atividade</a></li>
 			 		</ul>
 			 	
 				</div>
 			</div>
 			
 			<div class="col-sm-10">
-				<!--  <form name="atividade" action="../controller" method="post" onsubmit="return validateForm()">
-					Login: <input type="text" name="login" /><br> 
-					Titulo: <input type="text" name="titulo" size="100"/><br>
-					Data: <input type="text" name="data" /><br>
-					Descricao: <br><textarea name="descricao" onchange="return tamanhoDescricao()"></textarea><br><br> 
-					<input type="submit" value="Criar Atividade!" />
-					<input type="hidden" value="CriaAtividade" name="opcao"/>
-				</form>
-				-->
+
 				<div class="col-sm-2">
 				</div>
 				<div class="col-sm-6 ">
-				<form role="form-horizontal" action="criaAtividade" method="post" onsubmit="return validateForm()"> 
+				<p style="color: red">${msgE}</p>
+				<form role="form-horizontal" action="cria-atividade" method="post" onsubmit="return validateForm()"> 
 					<div class="form-group">
-					<label for="criador">Criador:</label>
-						<input type="text" name="login" class="form-control" id="login" placeholder="Digite o usuário"/>
+						<input type="text" name="criador" class="form-control" id="criador" placeholder="Digite o usuário"/>
 					</div>
 					<br>
-					<div class="form-group">
-					<label for="titulo">Título:</label> 					
+					<div class="form-group"> 					
 						<input type="text" name="titulo" class="form-control" id="titulo" placeholder="Digite o titulo"/>
 					</div>
 					<br>
 					<div class ="form-group">
-					<label for="data">Data:</label>
 						<input type="text" name="data" class="form-control" id="nascimento" size="8" placeholder="00/00/00" onchange="return validateData()" />
 					</div>
 					<br>
-					
 					<div class="form-group">
 						<label for="descricao">Descrição:</label>
-						<textarea class="form-control" rows="5" id="descricao"></textarea>
+						<textarea class="form-control" rows="5" id="descricao" name="descricao"></textarea>
 					</div>
 					<br>
-					<div class="text-right">
+					<div>
 						<input type="submit" class="btn btn-primary" value="Criar Atividade" onclick="return validateForm()" />
 					</div>
 				</form>

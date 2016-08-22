@@ -4,15 +4,30 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
 import com.mysql.jdbc.PreparedStatement;
 
 import projectprogweb.cripto.BCrypt;
 import projectprogweb.jdbc.ConexaoBD;
 import projectprogweb.modelo.Usuario;
 
+@Repository
 public class UsuarioDAO {
 	private Connection connection;
 	
+	/*@Autowired
+	public UsuarioDAO(DataSource dataSource) {
+		try {
+			this.connection = dataSource.getConnection();
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	*/
 	public UsuarioDAO(){
 		this.connection = new ConexaoBD().getConexaoBD();
 	}

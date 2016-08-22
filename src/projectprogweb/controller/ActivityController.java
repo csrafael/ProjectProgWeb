@@ -1,42 +1,46 @@
 package projectprogweb.controller;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import projectprogweb.dao.AtividadesDAO;
 import projectprogweb.dao.UsuarioDAO;
-import projectprogweb.modelo.Atividade;
+import projectprogweb.dao.AtividadesDAO;
 import projectprogweb.modelo.Usuario;
+import projectprogweb.modelo.Atividade;
 
+@Controller
 public class ActivityController {
-
-	
-	@RequestMapping(value="criaAtividade", method=RequestMethod.GET)
-	public String cadastra() {
+	@RequestMapping(value = "criaAtividade", method = RequestMethod.GET)
+	public String criaAtividade() {
 		return "admin/criaAtividade";
 	}
-	@RequestMapping(value="criaAtividade", method=RequestMethod.POST)
-	public String criaAtvidade(Usuario user, Atividade atividade, HttpServletRequest req, Model model){
-		UsuarioDAO dao = new UsuarioDAO();
-		
-		if(dao.checaPermissao(user) == true){
-			Atividade atv = new Atividade();
-			atv.setCriador(atividade.getCriador());
-			atv.setTitulo(atividade.getTitulo());
-			atv.setDescricao(atividade.getDescricao());
-			atv.setData(atividade.getData());
-			
-			AtividadesDAO atvDAO = new AtividadesDAO();
-			atvDAO.criaAtividade(atv);
 
-			return "/admin/index.jsp";
-		}else 
-			req.setAttribute("msg", "Usuario ou senha incorreto(s)!");
-		return "/admin/cria-atividade.jsp";
+	@RequestMapping(value = "cria-atividade", method = RequestMethod.POST)
+	public String criaAtividade(Atividade atividade, HttpServletRequest req, Model model) {
+		UsuarioDAO user = new UsuarioDAO();
+		
+		if (!user.estaCadastrado(atividade.getCriador()) || req.getSession().getAttribute("usuario") != atividade.getCriador()) {
+			model.addAttribute("msgE", "Usuario incorreto");
+			return "/admin/criaAtividade";
+		} else {
+			AtividadesDAO atvDAO = new AtividadesDAO();
+			atvDAO.criaAtividade(atividade);
+			return "/admin/index";
+		}
+		
+	}
+	
+	@RequestMapping(value="subscribe", method = RequestMethod.POST)
+		public String Subscribe(Atividade atv){
+			
+			return "/admin/index";
+		}
+
+	@RequestMapping(value = "/admin/atividade", method = RequestMethod.GET)
+	public String atividade() {
+		return "admin/atividade";
 	}
 }

@@ -51,6 +51,9 @@
     		</div>
     		
     		<div class="col-sm-4 text-center conteudo"> 
+	    		<div class="row">
+    				 <img src="resources/img/logoshare.png" class="img-responsive center-block" alt="logo">
+    			</div>			
 				<h2>Login no Sistema</h2>
 				<p style="color: red">${msgE}</p>
 				<p style="color:green">${msgS}</p>

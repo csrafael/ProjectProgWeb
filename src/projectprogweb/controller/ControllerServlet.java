@@ -26,7 +26,7 @@ public class ControllerServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String opcao = req.getParameter("opcao");
-		String nomeDaClasse = "project.acao." + opcao;
+		String nomeDaClasse = "projectprogweb.acao." + opcao;
 		
 		try {
 			Class<?> classe = Class.forName(nomeDaClasse);

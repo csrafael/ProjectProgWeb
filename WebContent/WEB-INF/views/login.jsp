@@ -28,15 +28,6 @@ function validateForm(){
 }
 </script>
 <body>
-	
-	<!--  
-	<form name="login" action="controller" method="post" onsubmit="return validateForm()">
-				Login: <input type="text" name="login"><br>
-				Senha: <input type="password" name="senha"><br> 
-				<input type="submit" value="Entrar" />
-				<input type="hidden" value="Login" name="opcao"/>
-	</form>
-	-->
 	<div class="container-fluid">    
 	
   		<div class="row content">
@@ -46,7 +37,7 @@ function validateForm(){
     		
     		<div class=" mainbox col-sm-4 text-center conteudo"> 
     			<div class="row">
-    				 <img src="resources/img/logoshare.png" class="img-responsive" alt="logo">
+    				 <img src="resources/img/logoshare-2.png" class="img-responsive center-block" alt="logo">
     			</div>
 				<h2>Login no Sistema</h2>
 				<p style="color: red">${msgE}</p>

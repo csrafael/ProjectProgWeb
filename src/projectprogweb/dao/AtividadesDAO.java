@@ -1,7 +1,9 @@
 package projectprogweb.dao;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.mysql.jdbc.PreparedStatement;
 
@@ -64,5 +66,31 @@ public class AtividadesDAO {
 		}catch (SQLException e){
 			throw new RuntimeException(e);
 		}
+	}
+	
+	public ArrayList<Atividade> getLista(){
+		ArrayList<Atividade> lista = new ArrayList<Atividade>(); 
+		PreparedStatement stmt;
+		
+		try{
+			stmt = (PreparedStatement) connection.prepareStatement("select * from atividades");
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()){
+				Atividade atv = new Atividade();
+				atv.setCriador(rs.getString("user"));
+				atv.setDescricao(rs.getString("descricao"));
+				atv.setTitulo(rs.getString("titulo"));
+				atv.setData(rs.getString("date"));
+				lista.add(atv);
+			}
+			
+			rs.close();
+			stmt.close();
+			
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+		return lista;
 	}
 }

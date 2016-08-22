@@ -4,7 +4,7 @@
 <html>
 <head>
 
-<title>Insert title here</title>
+	<title>UFABC Share - Perfil</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
@@ -56,7 +56,7 @@
         				<span class="icon-bar"></span>
         				<span class="icon-bar"></span>                        
       				</button>
-      				<a class="navbar-brand" href="admin/index">UFABC Share</a>
+      				<a class="navbar-brand" href="${pageContext.request.contextPath}/admin/index"><img alt="UFABC Share" class="center-block logo" src="resources/img/logoabc-2.png"></a>
     			</div>
 
 		 		<div class="collapse navbar-collapse" id="myNavbar">
@@ -66,12 +66,11 @@
   						</li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
-      					<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     				</ul>
   				</div>
 			</div>
 		</nav>
-	
 	
 	<div class ="container-fluid">
 		<div class="row content">
@@ -86,7 +85,10 @@
 				<img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png">
        							
-				Alterar Senha
+       			<p style="color: red">${msgE}</p>
+				<p style="color:green">${msgS}</p>
+       					
+				
 				<form action="../controller" method="post">
 				Login: <input type="text" name="login" /><br> 
 				Senha Antiga: <input type="password" name="senhaAntiga" /><br>
@@ -102,7 +104,14 @@
 				<input type="submit" value="Alterar" />
 				<input type="hidden" value="AlteraEmail" name="opcao"/>
 				</form>
-							
+				
+				<form action="../controller" method="post">
+				Login: <input type="text" name="login" /><br>
+				Senha: <input type="password" name="senha" /><br><br>
+				<input type="submit" value="Remover" />
+				<input type="hidden" value="Remove" name="opcao"/>
+	</form>
+				
 				</div> 
 			</div>
 		</div>
