@@ -33,7 +33,7 @@
   						</li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
-      					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      					<li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     				</ul>
   				</div>
 			</div>

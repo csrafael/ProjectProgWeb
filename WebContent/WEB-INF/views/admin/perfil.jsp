@@ -67,7 +67,7 @@
   						</li>
     				</ul>
     				<ul class="nav navbar-nav navbar-right">
-      					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+      					<li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
     				</ul>
   				</div>
 			</div>
@@ -94,37 +94,62 @@
        					<p style="color: red">${msgE}</p>
 						<p style="color:green">${msgS}</p>
        				</div>
-				
+				<div class="atv">
+					<h3>Alterar Senha</h3> <br>
 					<form role="form-horizontal" action="alteraSenha" method="post">
 						<div class="form-group">
 							<label for="login">usuario</label>
 							<input type="text" name="login" class="form-control" id="login" placeholder="${Usuario.login}"/>
 						</div>
-					<div class="form-group">
-						<label for="oldPassword">Senha antiga:</label>				
-						<input type="password" name="oldPassword" class="form-control" id="password" placeholder="Senha Antiga"/>
-					</div>
-					<div class="form-group">
-						<label for="oldPassword">Nova Senha:</label> 					
-						<input type="password" name="password" class="form-control" id="password" placeholder="Caso queira uma nova senha, digite-a e clique no botão"/>
-					</div>
-					<div>
-						<input type="submit" class="btn btn-primary" value="Alterar Senha"/>
-					</div>
-				</form>
-				
-				altera email
+						<div class="form-group">
+							<label for="oldPassword">Senha antiga:</label>				
+							<input type="password" name="oldPassword" class="form-control" id="password" placeholder="Senha Antiga"/>
+						</div>
+						<div class="form-group">
+							<label for="password">Nova Senha:</label> 					
+							<input type="password" name="password" class="form-control" id="password" placeholder="Caso queira uma nova senha, digite-a e clique no botão"/>
+						</div>
+						<div>
+							<input type="submit" class="btn btn-primary" value="Alterar Senha"/>
+						</div>
+					</form>
+				</div>
+				<br>
+				<div class="atv">
+				<h3>altera email</h3>
 				<form role="form-horizontal" action="alteraEmail" method="post">
-				Email: <input type="text" name="email" /><br> 
-				Senha: <input type="password" name="senha" /> <br><br>
-				<input type="submit" value="Alterar" />
+					<div class="form-group">
+							<label for="login">usuario</label>
+							<input type="text" name="login" class="form-control" id="login" placeholder="${Usuario.login}"/>
+						</div>
+					<div class="form-group">
+							<label for="email">email</label>
+							<input type="text" name="email" class="form-control" id="email" placeholder="${Usuario.getEmail() }"/>
+						</div>
+					<div class="form-group">
+						<label for="password">Senha:</label> 					
+						<input type="password" name="password" class="form-control" id="password" placeholder="Caso queira trocar o email, digite a senha e clique no botão"/>
+					</div> <br><br>
+				<input type="submit" class="btn btn-primary" value="Alterar" />
 				
 				</form>
-				
-				<form role="form-horizontal" action="removeUsuario" method="post">
-					<input type="submit" class="btn btn-primary" value="Remover Usuario" />
-				</form>
-				
+				</div>
+				<br>
+				<div class="atv">
+					<form role="form-horizontal" action="removeUsuario" method="post">
+						<div class="form-group">
+							<label for="login">usuario:</label>
+							<input type="text" name="login" class="form-control" id="login" placeholder="${Usuario.login}"/>
+						</div>
+						<div class="form-group">
+							<label for="password">Senha:</label> 					
+							<input type="password" name="password" class="form-control" id="password" placeholder="digite a senha para deletar usuario"/>
+						</div>
+						<div>
+						<input type="submit" class="btn btn-primary pull-right" value="Remover Usuario" />
+						</div>
+					</form>
+				</div>
 				</div> 
 			</div>
 		</div>

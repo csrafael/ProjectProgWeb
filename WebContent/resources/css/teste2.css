@@ -17,7 +17,7 @@ body{
 }
 .atv{
 	border: solid;
-	margin-left: 5px;
+	margin-left: 10px;
 	padding: 10px;
 }
 #icon-facebook{
@@ -39,5 +39,5 @@ body{
 }
 
 .perfilbox{
-	background-color: ccffff;
+	background-color: #bfbfbf;
 }
