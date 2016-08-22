@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,37 +81,49 @@
 			<div class="col-sm-10">
 				<div class="col-sm-2">
 				</div>
-				<div class="col-sm-6 ">	
-				
-				<img alt="perfilImg" class="center-block img-circle img-responsive" 
+				<div class="col-sm-6 perfilbox">	
+					<div class="row content img">
+						<img alt="perfilImg" class="center-block img-circle img-responsive" 
        							src="http://www.lcfc.com/images/common/bg_player_profile_default_big.png">
-       							
-       			<p style="color: red">${msgE}</p>
-				<p style="color:green">${msgS}</p>
-       					
+      
+       				</div>	
+       				
+       				<br><br>
+       				
+       				<div class="alert">	
+       					<p style="color: red">${msgE}</p>
+						<p style="color:green">${msgS}</p>
+       				</div>
 				
-				<form action="../controller" method="post">
-				Login: <input type="text" name="login" /><br> 
-				Senha Antiga: <input type="password" name="senhaAntiga" /><br>
-				Senha Nova: <input type="password" name="senhaNova" /><br> 
-				<input type="submit" value="Alterar" />
-				<input type="hidden" value="AlteraSenha" name="opcao"/>
+					<form role="form-horizontal" action="alteraSenha" method="post">
+						<div class="form-group">
+							<label for="login">usuario</label>
+							<input type="text" name="login" class="form-control" id="login" placeholder="${Usuario.login}"/>
+						</div>
+					<div class="form-group">
+						<label for="oldPassword">Senha antiga:</label>				
+						<input type="password" name="oldPassword" class="form-control" id="password" placeholder="Senha Antiga"/>
+					</div>
+					<div class="form-group">
+						<label for="oldPassword">Nova Senha:</label> 					
+						<input type="password" name="password" class="form-control" id="password" placeholder="Caso queira uma nova senha, digite-a e clique no botão"/>
+					</div>
+					<div>
+						<input type="submit" class="btn btn-primary" value="Alterar Senha"/>
+					</div>
 				</form>
 				
 				altera email
-				<form action="../controller" method="post"> 
+				<form role="form-horizontal" action="alteraEmail" method="post">
 				Email: <input type="text" name="email" /><br> 
 				Senha: <input type="password" name="senha" /> <br><br>
 				<input type="submit" value="Alterar" />
-				<input type="hidden" value="AlteraEmail" name="opcao"/>
+				
 				</form>
 				
-				<form action="../controller" method="post">
-				Login: <input type="text" name="login" /><br>
-				Senha: <input type="password" name="senha" /><br><br>
-				<input type="submit" value="Remover" />
-				<input type="hidden" value="Remove" name="opcao"/>
-	</form>
+				<form role="form-horizontal" action="removeUsuario" method="post">
+					<input type="submit" class="btn btn-primary" value="Remover Usuario" />
+				</form>
 				
 				</div> 
 			</div>

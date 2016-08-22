@@ -92,6 +92,9 @@
 				</div>
 				<div class="col-sm-6 ">
 				<p style="color: red">${msgE}</p>
+				
+				
+				<h1> Criar Atividade </h1><br><br>
 				<form role="form-horizontal" action="criaAtividade" method="post" onsubmit="return validateForm()"> 
 					<div class="form-group">
 						<input type="text" name="criador" class="form-control" id="criador" placeholder="Digite o usuário"/>

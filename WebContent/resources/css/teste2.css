@@ -1,7 +1,7 @@
 @CHARSET "ISO-8859-1";
 
 body{		
-		background-color:#cccccc;
+		background-color:	#f2f2f2;
 }
 .navbar{
   	margin:10px;
@@ -12,11 +12,13 @@ body{
 }
 
 .sidenav{
-  background-color: aqua;
+  background-color:#333333;
+  height: 720px;
 }
 .atv{
 	border: solid;
 	margin-left: 5px;
+	padding: 10px;
 }
 #icon-facebook{
 	width: 40px;
@@ -31,4 +33,11 @@ body{
 	width: 70px;
 	height: auto;
 	position: relative;
+}
+.img{
+	margin:20px;
+}
+
+.perfilbox{
+	background-color: ccffff;
 }

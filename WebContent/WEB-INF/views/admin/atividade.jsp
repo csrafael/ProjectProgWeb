@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page
+	import="java.util.*, projectprogweb.dao.AtividadesDAO, projectprogweb.modelo.Atividade"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +56,7 @@
 			</div>
 			
 			<div class="col-sm-10 mainbox">
-				<div class="row col-sm-12 panel-body">
+				<div class="row col-sm-12 panel-body text-center">
 						<img alt="" src="" class="center-block img-responsive">
 						
 						

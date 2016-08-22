@@ -4,9 +4,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
 import com.mysql.jdbc.PreparedStatement;
-
 import projectprogweb.jdbc.ConexaoBD;
 import projectprogweb.modelo.Atividade;
 
@@ -20,7 +18,7 @@ public class AtividadesDAO {
 	}
 	
 	public void criaAtividade(Atividade atv){
-		String sql = "insert into atividades (user, descricao, titulo, date) values (?,?,?,?)";
+		String sql = "insert into atividades (user, descricao, titulo, date, inscritos) values (?,?,?,?,?)";
 		
 		try{
 			PreparedStatement stmt = (PreparedStatement) connection.prepareStatement(sql);
@@ -29,6 +27,7 @@ public class AtividadesDAO {
 			stmt.setString(2, atv.getDescricao());
 			stmt.setString(3, atv.getTitulo());
 			stmt.setString(4, atv.getData());
+			stmt.setString(5, atv.getCriador());
 			
 			stmt.execute();
 			stmt.close();
@@ -93,6 +92,7 @@ public class AtividadesDAO {
 		}
 		return lista;
 	}
+	
 	public void adicionaInscrito(String login, String atv){
 		String sql = "update atividades set inscritos=concat(inscritos,?) where titulo=?";
 		

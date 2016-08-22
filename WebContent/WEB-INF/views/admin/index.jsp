@@ -69,12 +69,13 @@
 							<h2><a href="${pageContext.request.contextPath}/admin/atividade">${atividade.titulo }</a></h2>
 							<h6>Descricao: ${atividade.descricao }</h6>
 							Criador: ${atividade.criador} Data: ${atividade.data }
-							<form action="subscribe" method="post">
+							<br><br>
+							<form role="form" action="subscribe" method="post">
 								<input type="hidden" name="criador" value="${atividade.criador }"/>
 								<input type="hidden" name="descricao" value="${atividade.descricao }"/>
 								<input type="hidden" name="titulo" value="${atividade.titulo }"/>
 								<input type="hidden" name="data" value="${atividade.data }"/>
-								<input type="submit" value="Inscrever-se" />
+								<input type="submit"  class="btn btn-primary" value="Inscrever-se" />
 							</form>
 						</div>
 					</div>

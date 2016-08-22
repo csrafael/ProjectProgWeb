@@ -24,22 +24,21 @@ public class ActivityController {
 		
 		if (!user.estaCadastrado(atividade.getCriador())) {
 			model.addAttribute("msgE", "Usuario incorreto");
-			return "/admin/criaAtividade";
 		} else {
 			AtividadesDAO atvDAO = new AtividadesDAO();
 			atvDAO.criaAtividade(atividade);
 			return "/admin/index";
 		}
-		
+		return "/admin/criaAtividade";
 	}
 	
 	@RequestMapping(value="subscribe", method = RequestMethod.POST)
-		public String Subscribe(Atividade atv){
-			
+		public String subscribe(Atividade atv, HttpServletRequest req, Model model){
+			AtividadesDAO dao = new AtividadesDAO();
+			dao.adicionaInscrito("," + req.getSession().getAttribute("usuario").toString(), atv.getTitulo());
 			return "/admin/index";
 		}
-
-	@RequestMapping(value = "/admin/atividade", method = RequestMethod.GET)
+			@RequestMapping(value = "/admin/atividade", method = RequestMethod.GET)
 	public String atividade() {
 		return "admin/atividade";
 	}
